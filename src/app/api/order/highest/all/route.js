@@ -11,7 +11,7 @@ export async function GET(request, response) {
   try {
     const allUsersOrder = prismaClient.user.findMany({
       include: {
-        orders: true,
+        order: true,
       },
     });
 

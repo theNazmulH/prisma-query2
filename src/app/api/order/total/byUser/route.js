@@ -14,7 +14,7 @@ export async function GET(request, response) {
     const orderByUser = prismaClient.user.findFirst({
       where: { id: userId },
       include: {
-        orders: true,
+        order: true,
       },
     });
 

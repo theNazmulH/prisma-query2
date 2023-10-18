@@ -14,7 +14,7 @@ export async function GET(request, response) {
     const productByCat = prismaClient.category.findFirst({
       where: { id: categoryId },
       include: {
-        products: true,
+        product: true,
       },
     });
 

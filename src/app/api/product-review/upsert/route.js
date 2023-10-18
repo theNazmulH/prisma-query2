@@ -1,6 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
-const prismaClient = new PrismaClient();
+const prismaClient = new PrismaClient({
+  // log: ['query']
+});
 BigInt.prototype.toJSON = function () {
   return this.toString();
 };
